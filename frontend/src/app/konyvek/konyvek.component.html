@@ -1,0 +1,72 @@
+<div class="container">
+  <h1>Könyvek</h1>
+  <table border="1" width="100%">
+    <thead>
+    <tr>
+      <th>Név</th>
+      <th>Darab</th>
+      <th>Író</th>
+      <th>Művelet</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let konyv of konyvek">
+      <td>{{ konyv.nev }}</td>
+      <td>{{ konyv.darab }}</td>
+      <td>{{ konyv.iro }}</td>
+      <td>
+        <button (click)="deleteKonyv(konyv.idkonyvek!)">Törlés</button>
+        <button (click)="loadKonyvForEdit(konyv)">Szerkesztés</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <h2>Új könyv hozzáadása</h2>
+  <form (ngSubmit)="addKonyv()">
+    <input
+      [(ngModel)]="newkonyv.nev"
+      name="nev"
+      placeholder="Könyv neve"
+      required
+    />
+    <input
+      [(ngModel)]="newkonyv.darab"
+      name="darab"
+      type="number"
+      placeholder="Darabszám"
+      required
+    />
+    <input
+      [(ngModel)]="newkonyv.iro"
+      name="iro"
+      placeholder="Író neve"
+      required
+    />
+    <button type="submit">Hozzáadás</button>
+  </form>
+
+  <h2>Szerkesztés</h2>
+  <form *ngIf="editedKonyv.idkonyvek" (ngSubmit)="editKonyv()">
+    <input
+      [(ngModel)]="editedKonyv.nev"
+      name="nev"
+      placeholder="Könyv neve"
+      required
+    />
+    <input
+      [(ngModel)]="editedKonyv.darab"
+      name="darab"
+      type="number"
+      placeholder="Darabszám"
+      required
+    />
+    <input
+      [(ngModel)]="editedKonyv.iro"
+      name="iro"
+      placeholder="Író neve"
+      required
+    />
+    <button type="submit">Módosítás</button>
+  </form>
+</div>

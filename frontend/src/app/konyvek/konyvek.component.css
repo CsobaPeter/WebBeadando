@@ -1,0 +1,128 @@
+/* Alap beállítások */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Fejléc */
+.container h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Táblázat */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background: #4CAF50;
+  color: white;
+  font-size: 1.2rem;
+}
+
+td {
+  background: #f2f2f2;
+  font-size: 1rem;
+}
+
+button {
+  padding: 8px 15px;
+  font-size: 1rem;
+  color: white;
+  background: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  color: white;
+  background: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #0056b3;
+}
+
+form h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+/* Különböző méretekhez reszponzív beállítások */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  table, form {
+    width: 100%;
+  }
+
+  button {
+    width: 48%;
+    margin-right: 4%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  table, form {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  form input {
+    font-size: 0.9rem;
+  }
+}
